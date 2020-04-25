@@ -1,0 +1,27 @@
+{
+  "name": "hex-grid-map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/U1F419/hex-grid-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/U1F419/hex-grid-map/issues"
+  },
+  "homepage": "https://github.com/U1F419/hex-grid-map#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.26.5",
+    "typescript": "^3.8.3"
+  }
+}

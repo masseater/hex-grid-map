@@ -1,0 +1,13 @@
+#hex-grid {
+  .hex {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #aaaaaa;
+    background-color: hue($color: #8ce9ca);
+    margin: 1px;
+  }
+
+  .row {
+    display: flex;
+  }
+}
