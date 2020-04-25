@@ -6,11 +6,14 @@ window.onload = () => {
   for (let r = 0; r < row; r++) {
     const rowClsDiv = document.createElement("div");
     rowClsDiv.classList.add("row");
+
+    let offset = 0;
     if (r % 2 != 0) {
       rowClsDiv.classList.add("even");
+      offset = 1;
     }
 
-    for (let c = 0; c < column; c++) {
+    for (let c = 0; c < column - offset; c++) {
       const hexDiv = createHexDivElement();
       hexDiv.classList.add("hex");
       rowClsDiv.appendChild(hexDiv);
