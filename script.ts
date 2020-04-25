@@ -6,6 +6,9 @@ window.onload = () => {
   for (let r = 0; r < row; r++) {
     const rowClsDiv = document.createElement("div");
     rowClsDiv.classList.add("row");
+    if (r % 2 != 0) {
+      rowClsDiv.classList.add("even");
+    }
 
     for (let c = 0; c < column; c++) {
       const hexDiv = createHexDivElement();
@@ -19,14 +22,14 @@ window.onload = () => {
 
 function createHexDivElement(): HTMLDivElement {
   const hexDiv = document.createElement("div");
-  const hexLeft = document.createElement("div");
-  hexLeft.classList.add("left");
-  hexDiv.appendChild(hexLeft);
+  const hexTop = document.createElement("div");
+  hexTop.classList.add("top");
+  hexDiv.appendChild(hexTop);
   const hexMiddle = document.createElement("div");
   hexMiddle.classList.add("middle");
   hexDiv.appendChild(hexMiddle);
-  const hexRight = document.createElement("div");
-  hexRight.classList.add("right");
-  hexDiv.appendChild(hexRight);
+  const hexBottom = document.createElement("div");
+  hexBottom.classList.add("bottom");
+  hexDiv.appendChild(hexBottom);
   return hexDiv;
 }
