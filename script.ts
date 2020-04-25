@@ -8,7 +8,7 @@ window.onload = () => {
     rowClsDiv.classList.add("row");
 
     for (let c = 0; c < column; c++) {
-      const hexDiv = document.createElement("div");
+      const hexDiv = createHexDivElement();
       hexDiv.classList.add("hex");
       rowClsDiv.appendChild(hexDiv);
     }
@@ -16,3 +16,17 @@ window.onload = () => {
     gridMap.appendChild(rowClsDiv);
   }
 };
+
+function createHexDivElement(): HTMLDivElement {
+  const hexDiv = document.createElement("div");
+  const hexLeft = document.createElement("div");
+  hexLeft.classList.add("left");
+  hexDiv.appendChild(hexLeft);
+  const hexMiddle = document.createElement("div");
+  hexMiddle.classList.add("middle");
+  hexDiv.appendChild(hexMiddle);
+  const hexRight = document.createElement("div");
+  hexRight.classList.add("right");
+  hexDiv.appendChild(hexRight);
+  return hexDiv;
+}
