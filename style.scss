@@ -6,10 +6,12 @@
     $height: 30px;
     display: flex;
 
-    .even {
-      left: $width;
-      margin-top: -($height / 4) !important;
-      margin-left: ($width / 4) !important;
+    &.even {
+      margin-left: ($width / 2);
+    }
+
+    &:not(:first-child) {
+      margin-top: -($height / 2);
     }
 
     .hex {
