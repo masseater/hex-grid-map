@@ -10,6 +10,7 @@ function setHexGrid(id: string) {
   for (let r = 0; r < row; r++) {
     const rowClsDiv = document.createElement("div");
     rowClsDiv.classList.add("row");
+    rowClsDiv.setAttribute("data-row", r.toString());
 
     let offset = 0;
     if (r % 2 != 0) {
@@ -20,6 +21,7 @@ function setHexGrid(id: string) {
     for (let c = 0; c < column - offset; c++) {
       const hexDiv = createHexDivElement();
       hexDiv.classList.add("hex");
+      hexDiv.setAttribute("data-column", c.toString());
       rowClsDiv.appendChild(hexDiv);
     }
 
@@ -27,7 +29,7 @@ function setHexGrid(id: string) {
   }
 }
 
-function createHexDivElement(): HTMLDivElement {
+function createHexDivElement() {
   const hexDiv = document.createElement("div");
   hexDiv.appendChild(createHaveClassDivElement("top"));
   hexDiv.appendChild(createHaveClassDivElement("middle"));
