@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/U1F419/hex-grid-map#readme",
   "devDependencies": {
-    "parcel": "^1.12.4",
+    "parcel": "^2.8.2",
     "sass": "^1.26.5",
     "typescript": "^3.8.3"
   }
